@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(https://thumbs.dreamstime.com/b/vector-cartoon-town-city-houses-buidings-31267864.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    overflow: hidden;
+}
+
+.human {
+    width: 15%;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+}
+
+.bullet {
+    transform: rotate(180deg);
+    position: absolute;
+    bottom: 39%;
+    left: 16%;
+    width: 2%;
+    animation: bullet 2s linear 2s 1;
+}
+
+.dead {
+    position: absolute;
+    right: 114%;
+    bottom: 5%;
+    width: 15%;
+    overflow: hidden;
+    animation: dead 4s linear 1;
+}
+
+.blood {
+    width: 0%;
+    position: absolute;
+    bottom: 35%;
+    right: 30%;
+    animation: blood .9s cubic-bezier(.14,.74,.22,.07) 3.6s 1;
+}
+
+.ambulance{
+    width: 26%;
+    position: absolute;
+    bottom: 0;
+    right: -25%;
+    animation: ambulance 3s linear 3s 1;
+}
+
+
+
+@keyframes bullet {
+
+    0% {
+        left: 18%;
+    }
+
+    100% {
+        left: 70%;
+    }
+
+}
+
+@keyframes dead {
+   
+  0%{
+    right: 115%;
+  }
+
+  50%{
+right: 35%;
+  }
+
+  100%{
+    right: 23%;
+    bottom: 5%;
+  }
+
+}
+
+@keyframes blood {
+
+    0% {
+        width: 0;
+
+    }
+
+    90% {
+        bottom: 0;
+        right: 35%;
+        width: 8%;
+    }
+
+
+    100% {
+        width: 0;
+    }
+
+}
+
+@keyframes ambulance {
+    from{
+        right: -25%;
+    }
+
+    to{
+        right: 100%;
+    }
+}
